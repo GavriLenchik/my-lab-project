@@ -12,7 +12,7 @@ const Book = require('./models/book');
 
 const app = express();
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.set('trust proxy', 1) // trust first proxy
 app.use(session({
@@ -81,6 +81,6 @@ let newBook2 = new Book({
   newBook2.save()
   newBook3.save()
 
-app.listen(port, () =>{
+app.listen(port, "0.0.0.0", () =>{
     console.log("Server work on "+ port)
 })
