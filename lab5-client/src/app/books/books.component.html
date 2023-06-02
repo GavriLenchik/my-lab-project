@@ -1,0 +1,18 @@
+<div class="card-deck mb-3 text-center" style="width: 1200px!important;">
+    <div *ngFor="let book of books" style="width: 700px; margin-bottom: 0px!important;" class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <img style='width: 200px; height: auto;' src="{{book.src}}">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title pricing-card-title">{{book.name}}</h3>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li><b>Автор: </b>{{book.author}}</li>
+          <li><b>Рік видання: </b>{{book.year}}</li>
+          <li><b>Жанри: </b>{{book.genre}}</li>
+          <li><b>Опис</b><br>{{book.desc}}</li><br>
+          <li style="color:rgb(17, 119, 93); font-size: medium;"><b>Ціна: </b>{{book.cost}} $</li>
+        </ul>
+        <a type="button" class="btn btn-lg btn-block btn-outline-primary" [routerLink]="['/order']">Замовити</a>
+      </div>
+    </div>
+</div>

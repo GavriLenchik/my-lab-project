@@ -1,0 +1,10 @@
+<div class="text-center" style="margin-top: 80px; padding: 10px 40px 10px 40px; border: 2px black solid; border-radius: 10px;">
+    <h1>Форма реєстрації</h1>
+    <form (submit)="userRegisterClick()">
+        <input type="text" [(ngModel)]="name" name="name" placeholder="Ім'я" class="form-control"><br>
+        <input type="text" [(ngModel)]="login" name="login" placeholder="Логін" class="form-control"><br>
+        <input type="email" [(ngModel)]="email" name="email" placeholder="E-mail" class="form-control"><br>
+        <input type="password" [(ngModel)]="password" name="password" placeholder="Пароль" class="form-control"><br>
+        <button class="btn btn-success" type="submit">Зареєструватися</button>
+    </form>
+</div>
