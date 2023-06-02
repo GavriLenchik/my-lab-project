@@ -39,7 +39,7 @@ app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-mongoose.connect(config.db);
+mongoose.connect(config.db, {useNewUrlParser: true});
 
 mongoose.connection.on('connected', () =>{
     console.log("Ok")
