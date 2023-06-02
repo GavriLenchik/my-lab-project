@@ -1,0 +1,24 @@
+{
+  "name": "lab5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express":"*",
+    "mongoose":"*",
+    "bcryptjs":"*",
+    "passport":"*",
+    "passport-jwt":"*",
+    "body-parser":"*",
+    "cors":"*",
+    "jsonwebtoken":"*",
+    "express-session":"*"
+  },
+
+  "author": "",
+  "license": "ISC"
+}
