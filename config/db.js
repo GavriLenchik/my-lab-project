@@ -1,4 +1,4 @@
 module.exports = {
-    db:"mongodb://10.5.0.2:27017/library",
+    db:"redis://red-cht3mj8rddlc2m8fp520:6379/library",
     secret: "some"
 }
