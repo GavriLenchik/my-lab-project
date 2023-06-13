@@ -27,24 +27,15 @@ export class AuthComponent {
     };
 
     if(user.password == undefined){
-      // this.flashMess.show("Ви не ввели пароль!",{
-      //   cssClass:'alert-danger',
-      //   timeout:4000
-      // })
+      alert("Ви не ввели пароль!")
     }
     else{
 
     this.authService.authUser(user).subscribe({next:(data:any)=>{
       if(!data.success){
-        // this.flashMess.show(data.msg,{
-        //   cssClass:'alert-danger',
-        //   timeout:4000
-        // });
+        alert(data.msg)
       } else{
-        // this.flashMess.show("Авторизація пройшла успішно.",{
-        //   cssClass:'alert-success',
-        //   timeout:4000
-        // });
+        alert("Авторизація пройшла успішно.");
         
         this.authService.storeUser(data.token, data.user);
         this.router.navigate(['/']);

@@ -17,10 +17,7 @@ export class HeaderComponent {
   }
   logoutUser(){
     this.authService.logout();
-    //this.flashMess.show("Ви вийшли з облікового запису.",{
-    //   cssClass:'alert-warning',
-    //   timeout:4000
-    // });
+    alert("Ви вийшли з облікового запису.");
     this.router.navigate(['/auth']);
     return false;
   }

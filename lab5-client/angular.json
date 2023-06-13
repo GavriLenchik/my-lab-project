@@ -63,7 +63,8 @@
               "browserTarget": "lab5-client:build:production"
             },
             "development": {
-              "browserTarget": "lab5-client:build:development"
+              "browserTarget": "lab5-client:build:development",
+              "port": 3000
             }
           },
           "defaultConfiguration": "development"

@@ -30,47 +30,29 @@ export class RegComponent {
       password: this.password
     };
 
-    // if(!this.checkName(user.name)){
-    //   this.flashMess.show("Введіть, будь ласка, ім'я!",{
-    //     cssClass:'alert-danger',
-    //     timeout:4000
-    //   });
-    //   return false;
-    // } else if(!this.checkLogin(user.login)){
-    //   this.flashMess.show("Введіть, будь ласка, логін!",{
-    //     cssClass:'alert-danger',
-    //     timeout:4000
-    //   });
-    //   return false;
-    // }
-    // else if(!this.checkEmail(user.email)){
-    //   this.flashMess.show("Введіть, будь ласка, e-mail!",{
-    //     cssClass:'alert-danger',
-    //     timeout:4000
-    //   });
-    //   return false;
-    // }
-    // else if(!this.checkPass(user.password)){
-    //   this.flashMess.show("Введіть, будь ласка, пароль!",{
-    //     cssClass:'alert-danger',
-    //     timeout:4000
-    //   });
-    //   return false;
-    // }
+     if(!this.checkName(user.name)){
+      alert("Введіть, будь ласка, ім'я!");
+      return false;
+    } else if(!this.checkLogin(user.login)){
+      alert("Введіть, будь ласка, логін!");
+      return false;
+    }
+    else if(!this.checkEmail(user.email)){
+      alert("Введіть, будь ласка, e-mail!");
+      return false;
+    }
+    else if(!this.checkPass(user.password)){
+      alert("Введіть, будь ласка, пароль!");
+      return false;
+    }
     
     this.authService.registerUser(user).subscribe({next:(data:any)=>{
         if(!data.success){
-          // this.flashMess.show(data.msg,{
-          //   cssClass:'alert-danger',
-          //   timeout:4000
-          // });
+          alert(data.msg)
           this.router.navigate(['/reg']);
         }
         else{
-          // this.flashMess.show(data.msg,{
-          //   cssClass:'alert-success',
-          //   timeout:2000
-          // });
+          alert(data.msg)
           this.router.navigate(['/auth'])
         }
       }
